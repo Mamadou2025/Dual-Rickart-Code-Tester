@@ -10,11 +10,11 @@ Functional Highlights:
 
 2. Idempotency Check: The function checks if f(f(x)) = f(x), identifying idempotent functions within the set of valid endomorphisms.
 
-3. Extended Image Calculation: The algorithm calculates the extended image of a function f using the logic that a value y ∈ M belongs to the extended image if there exists x1, x2 ∈ M such that max(y, f(x1)) = f(x2).
+3. Extended Image Calculation: The algorithm calculates the extended image of a function f using the logic that a value y ∈ M belongs to the extended image if there exists x1, x2 ∈ M such that gcd(y, f(x1)) = f(x2).
 
 4. Classification of Semimodules:
    - Dual Dual Rickart (Type 2): Determines if every function f has an associated idempotent function g such proper image of f coincides with kernel of g.
-   - Dual Dual Rickart (Type 1): Examines whether the extended image of f matches kernel of g.
+   - Dual Dual Rickart (Type 1): Examines whether the extended image of f matches the kernel of g.
 
 5. Performance: The runtime of the program depends exponentially on n, as all possible functions are generated and verified. Computational resources provided by Python's runtime environment are critical.
 
@@ -34,7 +34,9 @@ Steps:
 3.	Classify Functions:
 4.	Check for idempotency (f(f(x)) = f(x)).
 5.	Compute and store the image, extended image, kernel, and check i-regularity (image = extended image).
-6.	Test Dual Weak Rickart Property:
-7.	Verify if, for every function f, there exists an idempotent function g such that the extended image of f equals the kernel of g.
-8.	If all functions satisfy this, M has the dual weak Rickart property.
-9.	Output Results: Provide the analysis of each function and report whether M satisfies the property.
+
+6.	REMARK: For the second Python implementation MAX replaces gcd operation. One should remarks that GCD and MAX play symetric function 
+7.	Test Dual Weak Rickart Property:
+8.	Verify if, for every function f, there exists an idempotent function g such that the extended image of f equals the kernel of g.
+9.	If all functions satisfy this, M has the dual weak Rickart property.
+10.	Output Results: Provide the analysis of each function and report whether M satisfies the property.
